@@ -63,9 +63,9 @@ for (const item of gridItems) {
     }
   });
 }
-
+// reset button
 let reset = document.getElementById("reset-btn");
-reset.onclick = function () {
+reset.addEventListener("click", function () {
   for (const item of gridItems) {
     let value = item.getAttribute("value");
     let squareContent = document.querySelector(`.square[value='${value}']`);
@@ -77,4 +77,4 @@ reset.onclick = function () {
   showResult = false;
   currentTurn = "X";
   result.textContent = "";
-};
+});
