@@ -11,7 +11,9 @@ for (const item of gridItems) {
     if (boardArray[index] == "X" || boardArray[index] == "O") {
       return;
     }
-
+    if (gameIsFinished) {
+      return;
+    }
     // visually
 
     let squareContent = document.querySelector(`.square[value='${value}']`);
